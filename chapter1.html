@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Chapter 1</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}body{background:linear-gradient(135deg,#ff4fa3,#ff79c5,#ff9fd6);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow-y:auto;
+overflow-x:hidden;}.card{width:min(430px,100%);background:rgba(255,255,255,.15);backdrop-filter:blur(18px);padding:28px;border-radius:28px;color:#fff;text-align:center}.heart{font-size:68px;animation:beat 1.2s infinite}@keyframes beat{50%{transform:scale(1.12)}}#letter{white-space:pre-line;text-align:left;line-height:1.8;min-height:320px}button{display:none;width:100%;padding:15px;border:none;border-radius:40px;background:#fff;color:#ff2d86;font-weight:bold}.heartFloat{position:fixed;color:#ff2d86;opacity:.15;animation:float 10s linear infinite}@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-100px)}}</style></head><body><div class="card"><div class="heart">❤️</div><h1>💖 Chapter 1</h1><h2>How It All Started... ❤️</h2><div id="letter"></div><button id="next">➡️ Continue Our Story ❤️</button></div><script>const t=`Dearest Kuripe... ❤️
+
+Every beautiful love story has a beginning...
+
+Ours started with a simple friendship. 💞
+
+I never imagined that one day
+you would become the most important
+person in my life.
+
+Your smile became my happiness.
+Your voice became my comfort.
+Your presence became my home.
+
+Every day with you became
+a memory I never wanted to end.
+
+And this...
+is only the beginning of our story. ❤️`;let i=0,o=document.getElementById("letter");(function w(){if(i<t.length){o.textContent+=t[i++];setTimeout(w,35)}else document.getElementById("next").style.display="block"})();document.getElementById("next").onclick=()=>location.href="chapter2.html";setInterval(()=>{let h=document.createElement("div");h.className="heartFloat";h.textContent="❤";h.style.left=Math.random()*100+"vw";h.style.fontSize=(16+Math.random()*20)+"px";document.body.appendChild(h);setTimeout(()=>h.remove(),10000)},500);</script></body></html>

@@ -1,0 +1,296 @@
+/* ===========================
+   OUR STORY ❤️
+   HOME PAGE STYLE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow-y:auto;
+    padding:30px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #ff4fa3,
+        #ff6eb8,
+        #ff85c8,
+        #ff9fd6
+    );
+}
+
+
+
+/* Floating Hearts */
+
+.hearts{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:0;
+
+}
+
+.heartFloat{
+
+    position:absolute;
+
+    color:#ff2f86;
+
+    opacity:.18;
+
+    animation:floatHeart linear infinite;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(100vh) scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.18;
+
+}
+
+100%{
+
+transform:translateY(-120px) scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+/* Card */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:420px;
+    margin:30px 0;
+    padding:40px 28px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.13);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+
+    0 15px 45px rgba(255,20,147,.35),
+
+    inset 0 1px 1px rgba(255,255,255,.25);
+
+}
+
+/* Heart */
+
+.heart{
+
+    font-size:78px;
+
+    margin-bottom:18px;
+
+    animation:beat 1.3s infinite;
+
+}
+
+@keyframes beat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+/* Title */
+
+.title{
+
+    color:white;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 0 12px white,
+
+    0 0 30px hotpink;
+
+}
+
+/* Text */
+
+.line{
+
+    color:white;
+
+    font-size:23px;
+
+    line-height:1.8;
+
+    margin:18px 0;
+
+    font-weight:400;
+
+}
+
+/* Surprise Card */
+
+.surprise{
+
+    margin-top:28px;
+
+    margin-bottom:25px;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:22px;
+
+    backdrop-filter:blur(18px);
+
+}
+
+/* Button */
+
+#beginBtn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #ff1f7a,
+
+    #ff5bb5
+
+    );
+
+    box-shadow:
+
+    0 10px 35px rgba(255,20,147,.45);
+
+    transition:.35s;
+
+}
+
+#beginBtn:hover{
+
+    transform:scale(1.04);
+
+}
+
+#beginBtn:active{
+
+    transform:scale(.97);
+
+}
+
+/* Fade Animation */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:all .9s ease;
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+.title{
+
+font-size:42px;
+
+}
+
+.line{
+
+font-size:20px;
+
+}
+
+.surprise{
+
+font-size:20px;
+
+}
+
+#beginBtn{
+
+font-size:22px;
+}
+}
